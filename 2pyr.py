@@ -1,8 +1,8 @@
 ##########
-# 2PyR - Math tutoring program written in Python
+# 2PyR
+# Math tutoring program written in Python
 # Code by Jacob Turner
-# Released under the MIT license
-###########
+##########
 
 import random
 

@@ -1,3 +1,9 @@
+##########
+# The Awesome Problem
+# It cannot handle the awesome
+# By Jacob Turner
+##########
+
 class AwesomeError(Exception):
     pass
 

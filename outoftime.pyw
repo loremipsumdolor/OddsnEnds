@@ -1,7 +1,7 @@
 ##########
-# OUT OF TIME - Main Program
-# It does something
-# Code by Jacob Turner, released under the MIT license
+# Out of Time
+# Continuous running timer
+# By Jacob Turner
 ##########
 
 import time
@@ -9,7 +9,7 @@ import Tkinter as tk
 from datetime import datetime, timedelta
 
 group = "Group"
-choices = ['1', '2', '3', '4','5', '6', '7', '8', '9', '10', '11', '12']
+choices = [str(x) for x in range(1, 13)]
 
 class TimerApp(tk.Tk):
     def __init__(self):
@@ -111,7 +111,7 @@ class TimerApp(tk.Tk):
                 self.after(1000, self.countdown)
         else:
             time.sleep(.1)
-    
+
     def refreshtime(self):
         self.sec = timedelta(seconds=self.remaining)
         self.d = datetime(1,1,1) + self.sec
@@ -177,7 +177,7 @@ class TimerApp(tk.Tk):
 
     def settitle(self, groupnum):
         self.wm_title("OUT OF TIME - %s %s" % (group.upper(), self.var.get()))
-    
+
     def activatebuttons(self):
         self.hbutton.config(state='active')
         self.hhbutton.config(state='active')
@@ -208,8 +208,8 @@ class TimerApp(tk.Tk):
         self.sminbutton.config(state='disabled')
         self.stsecbutton.config(state='disabled')
         self.sfsecbutton.config(state='disabled')
-        self.ssecbutton.config(state='disabled')    
-   
+        self.ssecbutton.config(state='disabled')
+
 if __name__ == "__main__":
     app = TimerApp()
     app.mainloop()
